@@ -35,3 +35,28 @@ Com o fim da instalação, faremos as configurações iniciais para o usuario e 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/497f60b7-dc3d-4360-8d84-ecc19bb2185e)
 
 Na tela inicial do sistema, teremos que utilizar o comando **Ctrl + Alt + Delete** , você irá perceber que utilizar o teclado não funcionará na maquina virtual, neste caso, va na barra de ferramentas na parte de cima da maquina e clique em `Entrada -> Teclado -> Inserir Ctrl + Alt + Del` 
+
+# Primeiros Passos
+
+Assim que você acessar seu sistema operacional, o programa **Server Management** que é a ferramenta de gerenciamento do servidor irá abrir automaticamente, caso contrario, utilize a barra de pesquisa para abrir o programa.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/1573f6e1-d0f6-4e02-a11b-f56830cf5879)
+
+## Configurando IP
+
+Recomendo que a primeira configuração feita na maquina virtual seja definir um ip estatico/fixo no sistema operacional, caso não saiba como fazer essa configuração, recomendo este [guia](https://ajuda.programaconsumer.com.br/como-configurar-um-ip-fixo-no-computador-servidor/).
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/54672279-d61b-4256-a6b1-5325575a5dc3)
+
+Minha configuração ficou assim:
+
+```
+
+IP address: 10.0.0.227
+Subnet mask: 255.255.255.0
+Default Geteway: 10.0.0.24
+
+Preferred DNS server: 127.0.0.1
+Alternate DNS server: 1.1.1.1
+
+```
