@@ -172,3 +172,6 @@ Na categoria ISS clicando em Default Document podemos ver os documentos padrão 
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/515a09a7-a3a4-4162-8d4b-4d0352b1f9d0)
 
+Podemos ver que a pasta do arquivo que do site que é entregue pelo servidor fica na pasta `C:/inetpub/wwwroot`
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/4fdc2c10-b907-40ae-a8ae-b02e91be8d51)
