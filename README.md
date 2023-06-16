@@ -52,9 +52,9 @@ Minha configuração ficou assim:
 
 ```
 
-IP address: 10.0.0.227
+IP address: 10.0.0.27
 Subnet mask: 255.255.255.0
-Default Geteway: 10.0.0.24
+Default Geteway: 10.0.0.1
 
 Preferred DNS server: 127.0.0.1
 Alternate DNS server: 1.1.1.1
@@ -103,3 +103,52 @@ O ISS, ou Internet Information Services, é um serviço de servidor web desenvol
 O FTP, ou File Transfer Protocol, é um protocolo de transferência de arquivos utilizado para enviar e receber arquivos entre um cliente e um servidor. Ele facilita a transferência de arquivos de um local para outro pela rede. No contexto do FTP, um cliente FTP é usado para se conectar a um servidor FTP. Através dessa conexão, é possível enviar arquivos do cliente para o servidor ou baixar arquivos do servidor para o cliente.
 
 ## Instalação
+
+Para iniciar a instalação, clicamos em **Manage** na barra superior do Server Manager, e em seguida **Add Roles and Features**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/764694d5-f7b9-41d8-9173-22b7cfa36531)
+
+Assim que você abrir a janela de serviços, estará em uma pagina padrão de instalação, vamos marcar **skip this page by default** para não aparecer novamente e apertar em **Next**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e10c4556-3ce7-4905-99d9-659a906e44c6)
+
+Em seguida, apertamos em **Next** na próxima tela, e na seleção de Servidor apertamos denovo **Next** ja que só estamos utilizando um servidor local.
+
+Isso é um padrão que faremos para TODOS OS SERVIÇOS, de agora em diante, podemos pular direto para a sessão **Server Roles** e procure pelo **Web Service (ISS)**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/92302e33-9b27-402a-9493-b9ad305baa0e)
+
+Em seguida o instalador irá demonstrar que *features* serão necessárias para a instalação completa. Selecione `Add Features` para prosseguir.
+
+> Em todos os serviços que demonstrarem esta tela, iremos repetir esse processo, ja que as *features* são necessarias para o funcionamento adequado.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/5615bae7-4ee9-4953-b3da-4ba2a03723af)
+
+Próxima tela questiona se alguma feature EXTRA, neste caso, que não são explicitamente necessárias pra execução do serviço, assim, não iremos mudar nada, e passaremos para a próxima tela apertando em **Next**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e545f26e-7f27-4f50-87c6-34f3f81ee145)
+
+A próxima tela é uma descrição sobre o serviço, podemos pular para a próxima, onde iremos selecionar funções que utilizaremos, selecione as que estão presentes nas printes e logo em seguida, pressione **Next**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/2ade097c-764a-4ab0-9578-fb456c7ab050)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/c558c806-ec21-4ffd-a0d5-6d4514a6965d)
+
+Agora, vamos exportar a configuração para gerar um relatório completo de tudo o que foi instalado. Essa exportação é essencial para fins de auditoria do sistema, fornecendo informações valiosas sobre a instalação. Para fazer isso, basta clicar em "Exportar Configurações de Configuração" e aguardar a geração do relatório.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/25873ee2-3db4-41fb-8994-62918826e001)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/6daac65b-8f48-4b21-a126-58674c3351de)
+
+Selecione uma pasta, e clique em salve
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b6eac349-9e96-4931-b62d-19f58cf37743)
+
+Agora, vamos apenas apertar em Install e aguardar o final da instalação.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/3dd07d1d-2ded-44f4-ba7b-cb5580f5fa9d)
+
+Para checar se esta tudo funcionando acesse o ip da maquina virtual pelo navegador e verá uma tela assim.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/19c03c0b-4c85-49bd-a858-ced1ba88c5d9)
+
