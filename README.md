@@ -152,3 +152,23 @@ Para checar se esta tudo funcionando acesse o ip da maquina virtual pelo navegad
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/19c03c0b-4c85-49bd-a858-ced1ba88c5d9)
 
+## Configuração
+
+Você pode acessar as configurações do serviço indo em Tools e depois procurar por Internet Information Services (IIS) Manager
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/37323ea4-9a88-46fd-a322-11a305460f97)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/560ba3a1-903c-434b-aabc-b8c5994f7797)
+
+Veremos as configurações do servidor ao clicar no seu nome.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/1bb4240c-054e-4ef4-99ff-9a1da376643b)
+
+Pdemos ver mais opções clicando com o botão direito no nome do seu servidor. poderá ver mais opções de gerenciamento do serviço
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/073923dc-02b5-4006-9f37-446d9db9be53)
+
+Na categoria ISS clicando em Default Document podemos ver os documentos padrão do site
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/515a09a7-a3a4-4162-8d4b-4d0352b1f9d0)
+
