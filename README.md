@@ -60,3 +60,46 @@ Preferred DNS server: 127.0.0.1
 Alternate DNS server: 1.1.1.1
 
 ```
+
+## Atualizando Servidor
+
+Logo em seguida, vamos atualizar o servidor, atualizações regulares fornecem correções para vulnerabilidades de segurança conhecidas. Hackers e indivíduos mal-intencionados estão constantemente buscando maneiras de explorar brechas em sistemas desatualizados. Ao manter seu servidor atualizado, você protege seus dados, aplicativos e usuários contra ameaças cibernéticas, mantendo-se à frente dos ataques mais recentes.
+
+Dentro da barra de pesquisa do windows, pesquise `Windows Update` e selecione `Check for updates`.
+
+> ⚠️ Recomendo que faça essa atualização em uma maquina virtual APENAS se tiver alocado muito espaço no disco da maquina, a atualização do servidor é demorada, pode encher a memória e possivelmente corromper a memória
+
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e7174113-abec-48c5-ac16-63cc37d67d69)
+
+Caso escolha prosseguir com a atualização, recomendo que separe um dia dia apenas para a atualização.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/f8886e35-d550-4a82-afbb-0fbcd3ea20ca)
+
+Reinicie o servidor depois de atualizar.
+
+## Configurando Nome do Servidor
+
+Agora vamos finalmente configurar o servidor em si, dentro do Server Manager, faremos nossas primerias configurações, começando pelo nome. Para fazer isso, selecionamos o nome do servidor em `Local Server`
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/32b9093a-1619-40ec-ba55-bd40c1fa968a)
+
+Clique em **Computer name** e logo em seguida **Change**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/33d041d2-cb43-427a-9095-639f26b8d22a)
+
+A escolha de um bom nome para o servidor é importante, pois ajuda na identificação do servidor na rede. Ao nomear um servidor Windows, é importante seguir diretrizes essenciais. O nome deve ser descritivo, conciso e relevante para sua função. Mantenha uma convenção de nomenclatura consistente e evite caracteres especiais ou nomes genéricos. Essas diretrizes garantem uma identificação clara, facilidade de gerenciamento e organização da infraestrutura de servidores.
+
+Aqui os exemplos de como configurei o nome no meu servidor:
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/6c8cd9e9-1a43-4f0e-8396-7e684b988767)
+
+Após configurar, clique em OK, e logo em seguida reinicie o seu servidor.
+
+# IIS e FTP
+
+O ISS, ou Internet Information Services, é um serviço de servidor web desenvolvido pela Microsoft. Ele permite hospedar e fornecer páginas da web na internet. Basicamente, quando você digita um endereço de site em seu navegador, o ISS é responsável por entregar as páginas desse site para você visualizar. Ele processa solicitações de clientes e envia as informações necessárias para exibir o conteúdo da página no navegador.
+
+O FTP, ou File Transfer Protocol, é um protocolo de transferência de arquivos utilizado para enviar e receber arquivos entre um cliente e um servidor. Ele facilita a transferência de arquivos de um local para outro pela rede. No contexto do FTP, um cliente FTP é usado para se conectar a um servidor FTP. Através dessa conexão, é possível enviar arquivos do cliente para o servidor ou baixar arquivos do servidor para o cliente.
+
+## Instalação
