@@ -110,8 +110,6 @@ Para iniciar a instalação, clicamos em **Manage** na barra superior do Server 
 
 Assim que você abrir a janela de serviços, estará em uma pagina padrão de instalação, vamos marcar **skip this page by default** para não aparecer novamente e apertar em **Next**
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e10c4556-3ce7-4905-99d9-659a906e44c6)
-
 Em seguida, apertamos em **Next** na próxima tela, e na seleção de Servidor apertamos denovo **Next** ja que só estamos utilizando um servidor local.
 
 Isso é um padrão que faremos para TODOS OS SERVIÇOS, de agora em diante, podemos pular direto para a sessão **Server Roles** e procure pelo **Web Service (ISS)**
@@ -175,3 +173,68 @@ Na categoria ISS clicando em Default Document podemos ver os documentos padrão 
 Podemos ver que a pasta do arquivo que do site que é entregue pelo servidor fica na pasta `C:/inetpub/wwwroot`
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/4fdc2c10-b907-40ae-a8ae-b02e91be8d51)
+
+Na categoria ISS, clicando em Authentication podemos ver as configurações de autenticação, que podem ser habilitadas ou desabilitadas clicando com o botão direito.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/abd34512-3cd1-43c3-a4bf-2d7f1f99c83e)
+
+Podemos também criar um site novo, clicando com o botão direito na pasta **Sites** e clicando em **Add Website**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7cd57b61-a447-47e4-9335-26495d6bb8a5)
+
+VocÊ pode criar uma nova pasta para salvar os arquivos do seu site.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/ce7eed12-7cfc-4969-8b90-e4ffab5f1409)
+
+Salve os arquivos e selecione uma porta diferente da default (80), no meu caso eu coloquei 8080
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/f6d32796-2fa9-4681-b87e-079c942e3e81)
+
+Dentro dessa pagina podemos criar um certificado SSL
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/100859aa-b63a-4235-a1bd-4e33d76d5e73)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e72488ab-8945-4716-8b0c-590379f41e3e)
+
+E adicionar no site que criamos indo em Edit bidings depois de clicar com o botão direito no site criado
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/73c8d081-d33a-4b77-b3c8-3b7c23987693)
+
+Indo no endereço do site, será possivel verificar o certificado.
+
+# Samba
+
+O serviço Samba no Windows Server é uma implementação do protocolo SMB/CIFS que permite a interoperabilidade entre sistemas Windows e sistemas baseados em Linux/Unix. Ele permite compartilhar arquivos e recursos de rede entre servidores Windows e clientes Linux/Unix, além de oferecer recursos de autenticação, integração com o Active Directory, compartilhamento de impressoras em rede e promover a interoperabilidade entre diferentes plataformas. 
+
+## Instalação
+
+Para instalar o serviço, seguimos os mesmos passos realizados no serviço anterior, indo em **Manage**, **Add Roles and Features** e depois procurar por File Server Resource Manager, adicionando as features necessarias.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/39438e47-284f-4f52-976b-1fb9bba56332)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/856e2671-5376-4894-9298-8068f8002767)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/9dd40be7-850a-4d35-b424-8ca879569d3b)
+
+Indo para Tools e acessando o **File Server Resource Manager** encontramos a tela de gerenciamento do Serviço
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/92726d30-eebd-49f2-bc34-30e9fc3e3a2e)
+
+Na tela de Quotas Management e em Quotas, é possivel condigurar a quantidade de MB que a pasta deve conter, ou você pode acessar diretamente em Templates configurações de espaço prontas.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/492a2441-f0ea-4ea0-b4be-4b50a4d568a5)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/335aea40-e082-4667-b3da-1a7c968b889a)
+
+Dentro das opções de "Modelos de Restrição de Arquivos" (File Screens Templates), você pode escolher uma das configurações pré-existentes. Caso prefira criar sua própria configuração, basta clicar com o botão direito do mouse e selecionar "Criar Modelo de Restrição de Arquivos" (Create File Screen Template) para personalizar suas preferências.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/c065b2f1-e7a0-4f9e-8268-8c523313699d)
+
+Dentro das opções de "Armazenamento de Relatórios" (Reports Storage Management), é onde realizamos a configuração dos relatórios que o servidor irá gerar, fornecendo informações sobre todas as atividades ocorridas. Esses relatórios são extremamente importantes para fins de auditoria, ajudando a identificar e resolver problemas caso eles ocorram.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/024d4b97-0567-4c14-8a76-a7ba0ecb3563)
+
+
+
+
+
