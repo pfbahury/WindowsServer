@@ -327,3 +327,79 @@ Dividiremos a faixa de ip que o DHCP irá entregar para as maquinas.
 Podemos selecionar também uma faixa de ip a ser excluida
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/60a31ecf-d888-4596-b51b-d5b99aea27b1)
+
+Nessa configuração, podemos definir o tempo em que um dispositivo pode manter o mesmo endereço IP atribuído pelo servidor DHCP antes de renovar a solicitação. Esse aspecto é muito importante, principalmente em ambientes com alta rotatividade de dispositivos, como shoppings. Se o tempo for configurado de forma muito longa, os endereços IP disponíveis podem se esgotar rapidamente, impedindo que novos dispositivos se conectem à rede. Talvez você já tenha se deparado com a mensagem "Não foi possível obter endereço IP" ao tentar se conectar a uma rede desse tipo. Para evitar esse problema, é essencial ajustar adequadamente o tempo de renovação, levando em consideração as características do ambiente em que o servidor DHCP estará operando.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/d7558cc0-3284-45f6-87e1-be2c1acbd74e)
+
+Depois apertamos em next e podemos definir o nosso gateway
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/307aecd2-a3da-4e5c-b3d6-991807420c91)
+
+E na próxima tela podemos definir nosso DNS
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/fecd2f2a-3117-48d8-ad79-e57a37154a3f)
+
+Em seguida podemos apertar next até chegar no final da instalação
+
+Podemos também ir na pasta **Reservation** e clicando com o botão direito para criar criar IP reservados para maquinas especificas, tal como uma impressora.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/82b480f5-da29-426a-ba41-46d8187b948c)
+
+Clicando com o botão direito em IPV4, iremos clicar na opção **Reconcile All Scope** depois em **Verify** e verificamos nossa configuração.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/892d41f1-e56d-46d2-bbb2-f09a27565ce2)
+
+Ainda nas opções em IPV$ podemos clicar em **Properties** e ativamos a opção de atualizar as estatisticas para atualizar a cada 8 horas. 
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7bf46f51-a202-4dcd-becd-c83a9d5dde15)
+
+E em **Display Statistics** poderemos ver as estatisticas do DHCP.
+
+# Serviço de Impressão
+
+O serviço Print and Document Services no Windows Server é um conjunto de recursos e funcionalidades que permitem gerenciar e controlar as impressoras e os documentos em uma rede. Ele oferece um ambiente centralizado para configurar e monitorar dispositivos de impressão, bem como gerenciar os fluxos de trabalho relacionados a documentos.
+
+## Instalação e Configuração
+
+A instalação segue o mesmo processo dos serviços anteriores, desta vez iremos procurar pelo serviço **Print and Document Services** 
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/d3db4be3-2358-47a2-b025-87b5c90b11a7)
+
+Daremos **Next** nas janelas até chegar em **Roles Service** onde selecionaremos as funções que instalaremos no serviço.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/62ba07b2-6d4d-4ee8-bea5-f007a05d1e52)
+
+Logo em seguida iremos prosseguir a terminar a instalação assim como nos outros serviços, dentro da pagina principal do gerenciador do servidor, o serviço estará salvo como print services
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/20bcfed9-80f8-4714-b494-1f389bb461ef)
+
+Nessa janela vemos todos os detalhes do serviço
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/0371a4b3-91d5-4e10-acb7-c495925a43cb)
+
+Dentro da seção **Print Servers** estão armazenados todos os servidores de impressão. Nessa seção, existem algumas pastas específicas para organizar diferentes elementos relacionados às impressoras. A pasta **Drivers** contém todos os drivers necessários para o funcionamento das impressoras. A pasta **Forms** guarda os formatos de papel disponíveis para impressão. A pasta **Ports** armazena as configurações das portas de cada impressora. E a pasta **Prints** contém as informações e configurações de todas as impressoras disponíveis na rede.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b843309d-fa2f-45df-b94c-4ac2472be430)
+
+Podemos adicionar uma porta padrão para as impressoras, clicando com o botão direito  no servidor e logo em seguida em **Properties**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7b19d35a-e3b1-4878-b9c9-254a3636704a)
+
+Logo em seguida clicando em **Add Port** e selecionando um IP para a impressora e a porta.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/0cda73f5-7b28-47d0-b4eb-d8f3c97a0042)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/a3705849-6b48-493a-8578-7184e439637b)
+
+Em seguida apertamos em **Next** e **Finish**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/f8389875-cd16-4f67-82af-8660d72d4e38)
+
+Aqui podemos ver nosso dispositivo adicionado.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/0d9d266c-2a42-4ec2-b215-c20fcb5a6204)
+
+Para adicionar um driver par auma nova impressora, podemos ir na aba **Drivers** e deposi em **Add**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7a3c6179-0f8c-41b6-9ca8-dd88221c164d)
