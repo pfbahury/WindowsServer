@@ -403,3 +403,113 @@ Aqui podemos ver nosso dispositivo adicionado.
 Para adicionar um driver par auma nova impressora, podemos ir na aba **Drivers** e deposi em **Add**
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7a3c6179-0f8c-41b6-9ca8-dd88221c164d)
+
+Podemos escolher entre 64 ou 86 bits
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/ab608977-c36d-4121-bd8a-aad768db2617)
+
+O Serviço te oferece diversos Drivers ja presentes para que você instale, recomendo algum que ja venha com um servidor para instalar
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b781a446-bc49-4f5a-a128-442b6f66ff1b)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/96aab13f-9892-4e5b-af46-d42fa70e7c97)
+
+Aqui poderemos ver os Drivers instalados
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b7ff2415-b850-40e4-b117-7b819d7a3f83)
+
+O serviço ainda permite que você verifique as impressoras na pagina web acessando `127.0.0.1/printers` no seu navegador.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/a81a830c-5237-4ab2-a9eb-d2b720730dc6)
+
+# Active Directory
+
+O Active Directory é um serviço de diretório desenvolvido pela Microsoft que é amplamente utilizado em ambientes empresariais que utilizam o Windows Server. Ele fornece recursos de gerenciamento centralizado de usuários, grupos, computadores e recursos de rede. O Active Directory é projetado para facilitar a administração e o gerenciamento de uma rede, oferecendo recursos como autenticação, autorização e gerenciamento de políticas de segurança.
+
+O Active Directory possui algumas caracteristicas em serviço:
+
+- Autenticação de usuários: O Active Directory permite autenticar os usuários em uma rede, fornecendo um nome de usuário e uma senha. Isso garante que apenas usuários autorizados possam acessar recursos e informações na rede.
+- Gerenciamento centralizado de usuários e grupos: O Active Directory permite que os administradores criem e gerenciem contas de usuário, atribuam permissões e grupos de segurança, definam políticas de senha e personalizem configurações específicas para cada usuário. Isso simplifica a administração de usuários em uma rede.
+- Organização hierárquica de objetos: O Active Directory organiza objetos, como usuários, grupos e computadores, em uma estrutura hierárquica chamada de árvore de diretórios. Essa estrutura permite que os administradores organizem e gerenciem eficientemente os objetos com base em departamentos, locais geográficos ou outros critérios.
+- Políticas de segurança: O Active Directory permite que os administradores apliquem políticas de segurança em toda a rede, como exigir senhas fortes, definir políticas de bloqueio de contas e configurar restrições de acesso aos recursos. Isso ajuda a manter a segurança da rede e proteger informações confidenciais.
+- Serviços adicionais: O Active Directory suporta outros serviços, como o Domain Name System (DNS) para resolução de nomes na rede, o Group Policy para aplicação de configurações e políticas em vários computadores e o Lightweight Directory Access Protocol (LDAP) para acesso e consulta dos dados do diretório.
+
+## Instalação e Configuração
+
+Nesse ponto eu presumo que ja saiba qual o processo de instalação, para prosseguir, iremos procurar dentro de Add Features and Roles por Active Directory Domain Server.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/adf71f39-96e2-4b12-8ef6-2a19abb88ed7)
+
+Teremos uma pagina que descreve o serviço, mas podemos apenas clicar em Next.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/970c8d60-8c4c-4494-b9fb-d5bdc0beb90a)
+
+No final da instalação teremos a opção de transformar o servidor em uma maquina de dominio clicando no link azul escrito **Promote this server to a domain controller**.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/d4f34e81-8175-4ecc-9718-78e4cc1ed2d8)
+
+Aqui possuimos diversas opções de configuração, mas selecionaremos **Create a New Forest** para criar um dominio novo.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7b4f763b-c157-4d83-bb48-1884317c6b20)
+
+Colocaremos um nome para o dominio
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b6ae2008-6233-4fba-b7e6-6c53a1c24221)
+
+Aqui poderemos colocar a senha para o Directory Services Restore Mode (DSRM) que é um modo especial de inicialização do sistema operacional Windows Server, que permite a recuperação e a restauração do serviço de diretório Active Directory em um controlador de domínio. É utilizado quando ocorre uma falha grave no Active Directory ou quando há a necessidade de restaurar um backup do banco de dados do Active Directory.
+
+> ⚠️ esta senha é de extrema importancia, então crie uma senha robusta, mas que o usuario não possa esquecer.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/1168124b-43cd-427d-8b29-9a8d74e67e51)
+
+Clique next na proxima tela e logo depois configure o endereço para o NetBIOS, que é um conjunto de protocolos de comunicação usado principalmente em redes locais (LANs) para permitir a comunicação entre dispositivos. 
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/f4333d28-5643-4541-b86e-361b8361b584)
+
+Clique em **Next** na próxima pagina e logo em seguida, veja o resumo de suas configurações
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/34f2456c-51dd-4542-84e2-648833bd7b4f)
+
+O serviço farar uma checagem de pre-requisitos, quando terminar clique em **Install**.
+
+> Logo em depois deste processo o computador irá reiniciar para configurar o serviço.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/2998b3d4-9288-4c1b-a7d7-86de827bceda)
+
+Espere a reinicialização, e quando a maquina se iniciar novamente, poderá checar o seu processo ja funcionando. Para fazer login, use sua senha padrão, ou a senha configurada durante a instalação do serviço.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/4c2984a2-94ff-40a5-84d0-1042b93c3515)
+
+Em DNS manager dentro de tools, podemos adicionar um host novo clicando em **New Host**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/cb423ee6-7189-41c8-a9bb-58c47b83d037)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/a3dffa45-4418-4b56-98f4-01e3f89727ec)
+
+Qualquer usuario novo que for adicionado podera ser visualizado na pasta **Users** do gerenciador do **Active Directory Users and Computers**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/82714ed4-0ff2-4fa3-90c1-7365307aba9a)
+
+Aqui você pode configurar diretórios para usuarios diferentes de diferentes niveis de acesso. Vamos pegar como exemplo uma escola, para uma rede escolar, os acessos podem ser divididos em 3 grupos: Administração, Professores e Alunos. Clicando com o botão direito nos grupos criados, você pode criar um usuario novo, seu nome, iniciais e endereço de acesso.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e605ca81-ad58-4aa3-bd7b-78788c3c4e19)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/bf860376-9afe-488b-b357-87c84ecdc7d0)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/70a36c7e-304a-4b9d-a48d-bc171d499695)
+
+Podemos também acessar o **Group Policy Management Editor**, com ele, os administradores podem criar, editar e aplicar políticas de grupo para controlar e gerenciar as configurações dos sistemas na rede. A ferramenta oferece uma interface gráfica que facilita a definição de configurações específicas para grupos de usuários ou computadores, permitindo a aplicação consistente dessas configurações em toda a rede.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/ffaf6e90-bbc4-43f9-b3ce-bc769f6aeccb)
+
+Clicando em **Edit** no **Default Domain Policy**, podemos mudar nas configurações da política do serviço, como configurações de segurança, políticas de senha, configurações de auditoria, entre outras.
+
+Um dos exemplos de edição que podemos fazer, é o requisito minimo na criação de senhas:
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/9e3fd867-fb6d-42b5-9335-5611bad320ae)
+
+Outro exemplo é dentro das opções de segurança que mostra varias opções de customizações dentro de login, como por exemplo, uma mensagem de logon.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e0996d7a-e611-40ee-8a23-bf7e48894cd5)
+
+Esses são apenas alguns dos varios exemplos de configurações, utilizando o Active Directory, possuimos uma ampla capacidade de customização para criar um dominio completamente unico, e com um sistema de usuario completo de facil acesso. Com isso concluo essa documentação, agradeço por ler até aqui.
