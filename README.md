@@ -268,4 +268,20 @@ Deixaremos todas ativadas.
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/42aa879c-257d-4cd4-866e-9d0388c8d2e0)
 
+Na próxima janela, vamos configurar as permissões na pasta, no caso recomendo que apague todas as permissões predefinidas, clicando em  **Disable Inheritance** e depois em **Remove all inherited permissions from this object** 
 
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/f0318117-1add-437a-940c-1c6778b82935)
+
+Customize as permissões pesquisando em Find Now recomendo que permita o Administrador e os usuarios, e de as permissões que achar mais apropiado. 
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/4755a012-caf3-4a5a-9ab2-c3e0151b10df)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/3c59d057-fc10-4fd0-913c-5e04fa50feda)
+
+Em seguida aperte Next na próxima tela e selecione um espaço customizado.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b54cc8f3-3390-4b91-ae9a-39ba09719c5b)
+
+Em seguida você confirmara suas configurações, e concluir a criação clicando em **Create**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/c7243ed2-0e18-47f9-9d1e-a56d3cb7456d)
