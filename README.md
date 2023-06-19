@@ -285,3 +285,45 @@ Em seguida aperte Next na próxima tela e selecione um espaço customizado.
 Em seguida você confirmara suas configurações, e concluir a criação clicando em **Create**
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/c7243ed2-0e18-47f9-9d1e-a56d3cb7456d)
+
+Você podera ver aqui sua pasta feita, e clicando com o botão direito e em seguida **properties** poderá ver suas configurações.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e8cfd867-ca2e-4258-a8ea-8ea3ebf28b8f)
+
+# DHCP
+
+O DHCP (Dynamic Host Configuration Protocol) é um serviço utilizado em redes de computadores para atribuir automaticamente configurações de rede a dispositivos, como endereços IP, máscaras de sub-rede, gateways padrão, servidores DNS e outros parâmetros de rede. Ele simplifica a administração e configuração de dispositivos em uma rede, evitando a necessidade de configurar manualmente cada dispositivo individualmente.
+
+## Instalação e Configuração
+
+O processo de instalação envolve o mesmo processo, indo em Manage, add roles and features e em seguida procurando o serviço DHCP para a instalação, e no fim da instalação, selecionaremos **Complete DHCP Configuration**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/152eaf21-79e6-456a-9bc6-64f87cab77bd)
+
+No caso apenas daremos Next nas próximas telas, ja que não mudaremos necessariamente as configurações default, e iremos apenas focar em terminar com o processo completo de instalação
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b730cda9-97b8-4ca2-ac1e-25aea752f134)
+
+Agora que o processo foi finalizado, indo para o ambiente de gerenciamento do DHCP, indo para **Tools -> DHCP** faremos todas as nossas configurações
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/399bd748-6419-4ad8-bd7d-1523c2d6f28b)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/acb9e95c-380a-4cdf-8166-80a9cd2c39eb)
+
+Clicando com o botão direito do mouse em IPV4 vamos clicar na opção New Scope para configurarmos nosso serviço.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/32ee3998-dd33-43d7-9aae-bef458370618)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/a11b6810-ce3d-433d-9b54-c7537101b536)
+
+Definiremos o nome da nossa configuração e uma descrição
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/4af07353-4166-4f81-86b6-a58c985b1630)
+
+Dividiremos a faixa de ip que o DHCP irá entregar para as maquinas.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/2d41eb4b-f843-49e2-965e-6ee117e75158)
+
+Podemos selecionar também uma faixa de ip a ser excluida
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/60a31ecf-d888-4596-b51b-d5b99aea27b1)
