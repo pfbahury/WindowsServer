@@ -446,69 +446,70 @@ Teremos uma pagina que descreve o serviço, mas podemos apenas clicar em Next.
 
 No final da instalação teremos a opção de transformar o servidor em uma maquina de dominio clicando no link azul escrito **Promote this server to a domain controller**.
 
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/8df61f23-cb4c-4725-ac15-1344b6bce593)
 
 Aqui possuimos diversas opções de configuração, mas selecionaremos **Create a New Forest** para criar um dominio novo.
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7b4f763b-c157-4d83-bb48-1884317c6b20)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/93679e04-0050-4466-82de-24aee0665926)
 
 Colocaremos um nome para o dominio
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b6ae2008-6233-4fba-b7e6-6c53a1c24221)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/10a5c369-5138-45b9-999d-dd383b558540)
 
 Aqui poderemos colocar a senha para o Directory Services Restore Mode (DSRM) que é um modo especial de inicialização do sistema operacional Windows Server, que permite a recuperação e a restauração do serviço de diretório Active Directory em um controlador de domínio. É utilizado quando ocorre uma falha grave no Active Directory ou quando há a necessidade de restaurar um backup do banco de dados do Active Directory.
 
 > ⚠️ esta senha é de extrema importancia, então crie uma senha robusta, mas que o usuario não possa esquecer.
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/1168124b-43cd-427d-8b29-9a8d74e67e51)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/4ee9eb43-d852-433d-bd96-70f060e4e158)
 
 Clique next na proxima tela e logo depois configure o endereço para o NetBIOS, que é um conjunto de protocolos de comunicação usado principalmente em redes locais (LANs) para permitir a comunicação entre dispositivos. 
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/f4333d28-5643-4541-b86e-361b8361b584)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/81fb5805-491d-4248-9725-29832886b49c)
 
 Clique em **Next** na próxima pagina e logo em seguida, veja o resumo de suas configurações
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/34f2456c-51dd-4542-84e2-648833bd7b4f)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e8e56a97-bb23-4f60-ab10-4159839d0e94)
 
-O serviço farar uma checagem de pre-requisitos, quando terminar clique em **Install**.
+O serviço irá fazer uma checagem de pre-requisitos, quando terminar clique em **Install**.
 
 > Logo em depois deste processo o computador irá reiniciar para configurar o serviço.
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/2998b3d4-9288-4c1b-a7d7-86de827bceda)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/6ed33b9c-a36c-4473-8b74-eaaeaf61e211)
 
 Espere a reinicialização, e quando a maquina se iniciar novamente, poderá checar o seu processo ja funcionando. Para fazer login, use sua senha padrão, ou a senha configurada durante a instalação do serviço.
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/4c2984a2-94ff-40a5-84d0-1042b93c3515)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/dec3776a-1129-4ebd-bd55-b358e7813191)
 
 Em DNS manager dentro de tools, podemos adicionar um host novo clicando em **New Host**
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/cb423ee6-7189-41c8-a9bb-58c47b83d037)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7e229844-c027-4295-a48e-f219e3688c79)
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/a3dffa45-4418-4b56-98f4-01e3f89727ec)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/21144ca8-25e4-4129-85c8-90a22916ae0f)
 
 Qualquer usuario novo que for adicionado podera ser visualizado na pasta **Users** do gerenciador do **Active Directory Users and Computers**
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/82714ed4-0ff2-4fa3-90c1-7365307aba9a)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/f8cdd29c-a515-4ddc-98e0-4067e2591728)
 
 Aqui você pode configurar diretórios para usuarios diferentes de diferentes niveis de acesso. Vamos pegar como exemplo uma escola, para uma rede escolar, os acessos podem ser divididos em 3 grupos: Administração, Professores e Alunos. Clicando com o botão direito nos grupos criados, você pode criar um usuario novo, seu nome, iniciais e endereço de acesso.
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e605ca81-ad58-4aa3-bd7b-78788c3c4e19)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/24aaacc3-07b4-4099-b507-f37bb6f608ef)
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/bf860376-9afe-488b-b357-87c84ecdc7d0)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/2ef2dac8-7d4d-4e21-a659-e880ce0e2af4)
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/70a36c7e-304a-4b9d-a48d-bc171d499695)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/7355cd6e-0061-4e14-8ae6-95d624655bb7)
 
 Podemos também acessar o **Group Policy Management Editor**, com ele, os administradores podem criar, editar e aplicar políticas de grupo para controlar e gerenciar as configurações dos sistemas na rede. A ferramenta oferece uma interface gráfica que facilita a definição de configurações específicas para grupos de usuários ou computadores, permitindo a aplicação consistente dessas configurações em toda a rede.
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/ffaf6e90-bbc4-43f9-b3ce-bc769f6aeccb)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/99dc56b2-8444-4e16-a064-e8842e7eac9d)
 
 Clicando em **Edit** no **Default Domain Policy**, podemos mudar nas configurações da política do serviço, como configurações de segurança, políticas de senha, configurações de auditoria, entre outras.
 
-Um dos exemplos de edição que podemos fazer, é o requisito minimo na criação de senhas:
+Um dos exemplos de edição que podemos fazer, são os requisitos minimos na criação de senhas:
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/9e3fd867-fb6d-42b5-9335-5611bad320ae)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/0656d0c1-c782-4e3e-82ca-6ca7e47a1a34)
 
 Outro exemplo é dentro das opções de segurança que mostra varias opções de customizações dentro de login, como por exemplo, uma mensagem de logon.
 
-![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e0996d7a-e611-40ee-8a23-bf7e48894cd5)
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/b1d5cd8d-1473-42cb-b928-6f68502cedcb)
 
 Esses são apenas alguns dos varios exemplos de configurações, utilizando o Active Directory, possuimos uma ampla capacidade de customização para criar um dominio completamente unico, e com um sistema de usuario completo de facil acesso. Com isso concluo essa documentação, agradeço por ler até aqui.
