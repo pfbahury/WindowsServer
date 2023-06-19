@@ -226,15 +226,46 @@ Na tela de Quotas Management e em Quotas, é possivel condigurar a quantidade de
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/335aea40-e082-4667-b3da-1a7c968b889a)
 
-Dentro das opções de "Modelos de Restrição de Arquivos" (File Screens Templates), você pode escolher uma das configurações pré-existentes. Caso prefira criar sua própria configuração, basta clicar com o botão direito do mouse e selecionar "Criar Modelo de Restrição de Arquivos" (Create File Screen Template) para personalizar suas preferências.
+Dentro das opções de **File Screens Templates**, você pode escolher uma das configurações pré-existentes. Caso prefira criar sua própria configuração, basta clicar com o botão direito do mouse e selecionar **Create File Screen Template** para personalizar suas preferências.
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/c065b2f1-e7a0-4f9e-8268-8c523313699d)
 
-Dentro das opções de "Armazenamento de Relatórios" (Reports Storage Management), é onde realizamos a configuração dos relatórios que o servidor irá gerar, fornecendo informações sobre todas as atividades ocorridas. Esses relatórios são extremamente importantes para fins de auditoria, ajudando a identificar e resolver problemas caso eles ocorram.
+Dentro das opções de **Reports Storage Management**, é onde realizamos a configuração dos relatórios que o servidor irá gerar, fornecendo informações sobre todas as atividades ocorridas. Esses relatórios são extremamente importantes para fins de auditoria, ajudando a identificar e resolver problemas caso eles ocorram.
 
 ![image](https://github.com/pfbahury/WindowsServer/assets/90939515/024d4b97-0567-4c14-8a76-a7ba0ecb3563)
 
+Dentre as configurações disponiveis, pode-se comentar:
 
+- Local de Armazenamento: Você pode definir o local onde os relatórios serão armazenados no servidor. Isso pode ser um diretório local ou uma pasta de rede compartilhada.
+- Retenção de Relatórios: É possível configurar a quantidade de tempo que os relatórios serão mantidos no armazenamento. Isso pode ser definido em dias, semanas, meses ou com base em um período específico.
+- Agenda de Geração de Relatórios: Você pode agendar a frequência com que os relatórios serão gerados. Isso pode ser diário, semanal, mensal ou em um intervalo personalizado.
+- Formato do Relatório: É possível especificar o formato dos relatórios gerados, como HTML, CSV (Comma-Separated Values) ou XML (eXtensible Markup Language).
+- Configurações de Notificação: Você pode definir opções de notificação para ser informado sobre a geração dos relatórios ou em caso de falhas na geração.
 
+E por fim em **File Management Task** é possivel ver as atividades que ocorrem no servidor. Ja que não estão conectado ao meu servidor, ele está vazio.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/f5ef9cb2-e9a9-4863-9d4f-24fc5ea3ff67)
+
+Voltando para o gerenciamento do servidor, e acessando **File and Storage Service -> Shares**, criamos nossa pasta compartilhada, iniciando o assitente, clicando com o botão direito e clicando em **New Share**
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/e606a489-37e7-49ca-95e9-b2e118a69f65)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/1125f423-3deb-4a6a-9f71-a5a3b0e21af3)
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/3a7a6d1b-765d-4b6e-be5e-494a892bc9a2)
+
+As configurações aqui envolvem customizar os detalhes da pasta como nome ou descrição.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/ff65babb-26c3-4c04-9b50-ca0c777505a9)
+
+Aqui temos as seguintes configurações:
+
+- Enable Access-based Enumeration: Controla a visibilidade de arquivos e pastas compartilhados com base nas permissões de acesso dos usuários.
+- Allow caching of share: Permite que os arquivos do compartilhamento sejam armazenados em cache nos clientes que acessam o compartilhamento.
+- Encrypt Data Access: Aplica criptografia aos dados que estão sendo acessados no compartilhamento de pasta.
+
+Deixaremos todas ativadas.
+
+![image](https://github.com/pfbahury/WindowsServer/assets/90939515/42aa879c-257d-4cd4-866e-9d0388c8d2e0)
 
 
